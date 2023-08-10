@@ -6,7 +6,7 @@ import '@/styles/components/heading.scss';
   - size : sm, md, lg
 */}
 
-function Heading({className, children, as, size}){
+function Heading({ className, children, as, size }){
   const HeadingTag = as;
 
   return(
