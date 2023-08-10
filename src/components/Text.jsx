@@ -11,4 +11,8 @@ function Text({ className, children, size }){
   )
 }
 
+Text.defaultProps = {
+  className: ""
+};
+
 export default Text;

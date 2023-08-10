@@ -14,4 +14,8 @@ function Heading({ className, children, as, size }){
   )
 }
 
+Heading.defaultProps = {
+  className: ""
+};
+
 export default Heading;
