@@ -1,6 +1,13 @@
 // Foundation
 @import "foundation/reset";
+@import "foundation/fonts";
 @import "foundation/variables";
+
+body{
+  font-family: $text-font;
+  font-weight: 400;
+  font-size: 16px;
+}
 
 .page-width{
   max-width: $page-width-m;
