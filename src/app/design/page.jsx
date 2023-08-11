@@ -1,6 +1,7 @@
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
+import Icon from '@/components/Icon';
 
 import '@/styles/pages/design.scss';
 
@@ -15,8 +16,14 @@ export default function DesignSystem() {
       <Text size="md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Text>
       <Text size="sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Text>
 
-      <Button link="">Primary button</Button>
-      <Button link="" variant="outline">Secondary button</Button>
+      <Button link="/">Primary button</Button>
+      <Button link="/" variant="outline">Secondary button</Button>
+
+      <div className="icons-container">
+        <Icon icon="design" width="80px" />
+        <Icon icon="development" width="80px" />
+        <Icon icon="e-commerce" width="80px" />
+      </div>
     </main>
   )
 }
