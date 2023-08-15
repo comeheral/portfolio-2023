@@ -2,6 +2,7 @@ import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
 import Icon from '@/components/Icon';
+import ProjectItem from '@/components/ProjectItem';
 
 import '@/styles/pages/design.scss';
 
@@ -23,6 +24,10 @@ export default function DesignSystem() {
         <Icon icon="design" width="80px" />
         <Icon icon="development" width="80px" />
         <Icon icon="e-commerce" width="80px" />
+      </div>
+
+      <div className="projects-container">
+        <ProjectItem />
       </div>
     </main>
   )

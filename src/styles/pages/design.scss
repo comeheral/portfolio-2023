@@ -8,3 +8,9 @@
   gap: 10px;
   margin-bottom: 20px;
 }
+
+.projects-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $gap;
+}

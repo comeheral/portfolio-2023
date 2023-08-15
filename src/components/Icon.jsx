@@ -2,13 +2,19 @@ import '@/styles/components/icon.scss';
 
 {/*
   Props :
-  - icon : design, development, e-commerce
+  - icon : arrow-right, design, development, e-commerce
   - width : icon width style
   - color : dark, white
 */}
 
 function Icon({ icon, width, color }){
   switch(icon){
+    case 'arrow-right':
+      return (
+        <svg className={`icon icon--${color}`} style={{width: width}} width="50" height="45" viewBox="0 0 50 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fillRule="evenodd" clipRule="evenodd" d="M39.0075 25.2043L0 25.2043V19.4619L39.0086 19.4619L23.6072 4.06045L27.6676 0L50.0001 22.3325L27.6676 44.665L23.6072 40.6045L39.0075 25.2043Z" fill="#11212C"/>
+        </svg>
+      )
     case 'design':
       return (
         <svg className={`icon icon--${color}`} style={{width: width}} width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
