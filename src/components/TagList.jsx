@@ -1,0 +1,18 @@
+import Tag from '@/components/Tag';
+import '@/styles/components/TagList.scss';
+
+function TagList({ className, tags }){
+  return (
+    <div className="tag-list">
+      {tags.map((tag, index) => (
+        <Tag key={`tag-${index}`}>{tag}</Tag>
+      ))}
+    </div>
+  )
+}
+
+TagList.defaultProps = {
+  className: ""
+}
+
+export default TagList;
