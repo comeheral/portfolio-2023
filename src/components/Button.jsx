@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import '@/styles/components/button.scss';
+import '@/styles/components/Button.scss';
 
 {/*
   Props :

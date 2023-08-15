@@ -1,4 +1,4 @@
-import '@/styles/components/text.scss';
+import '@/styles/components/Text.scss';
 
 {/*
   Props :

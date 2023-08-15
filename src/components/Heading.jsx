@@ -1,4 +1,4 @@
-import '@/styles/components/heading.scss';
+import '@/styles/components/Heading.scss';
 
 {/*
   Props :

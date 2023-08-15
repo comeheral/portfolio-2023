@@ -1,4 +1,4 @@
-import '@/styles/components/icon.scss';
+import '@/styles/components/Icon.scss';
 
 {/*
   Props :
