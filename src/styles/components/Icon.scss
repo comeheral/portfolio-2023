@@ -1,0 +1,12 @@
+.icon{
+  display: block;
+  height: auto;
+
+  &--dark{
+    path{ fill: $dark }
+  }
+
+  &--white{
+    path{ fill: $white }
+  }
+}
