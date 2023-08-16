@@ -7,6 +7,8 @@ import ProjectItem from '@/components/ProjectItem';
 import '@/styles/pages/design.scss';
 
 export default function DesignSystem() {
+  const projectTags = ['e-commerce', 'shopify'];
+
   return (
     <main className="page-width">
       <Heading as="h1" size="lg">Titre de niveau 1</Heading>
@@ -27,7 +29,12 @@ export default function DesignSystem() {
       </div>
 
       <div className="projects-container">
-        <ProjectItem />
+        <ProjectItem 
+          name="First project" 
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+          image="https://picsum.photos/800"
+          tags={projectTags} 
+          link="/" />
       </div>
     </main>
   )
