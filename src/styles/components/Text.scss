@@ -2,7 +2,6 @@
   font-family: $text-font;
   font-weight: 300;
   line-height: 160%;
-  margin-bottom: 20px;
 
   &--sm{
     font-size: 12px;
@@ -17,5 +16,13 @@
     @media (min-width: $bp-md){
       font-size: 24px;
     }
+  }
+
+  &--dark{
+    color: $dark;
+  }
+
+  &--white{
+    color: $white;
   }
 }

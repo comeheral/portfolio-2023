@@ -1,0 +1,57 @@
+.project-item{
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+
+  &__image{
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__content{
+    padding: 24px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__overlay{
+    position: absolute;
+    inset: 0;
+    top: -24px;
+    z-index: -1;
+    background: linear-gradient(transparent, rgba(black, 0.8));
+  }
+
+  &__heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__arrow{
+    background: $white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 12px;
+    transition: transform .2s;
+  }
+
+  &__details{
+    padding-top: 12px
+  }
+
+  &__tags{
+    margin-bottom: 16px;
+  }
+}

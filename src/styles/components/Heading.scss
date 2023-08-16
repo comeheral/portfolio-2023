@@ -2,7 +2,6 @@
   font-family: $title-font;
   font-weight: 600;
   line-height: 100%;
-  margin-bottom: 20px;
 
   &--sm{
     font-size: 24px;
@@ -23,5 +22,13 @@
     @media (min-width: $bp-md){
       font-size: 48px;
     }
+  }
+
+  &--dark{
+    color: $dark;
+  }
+
+  &--white{
+    color: $white;
   }
 }
