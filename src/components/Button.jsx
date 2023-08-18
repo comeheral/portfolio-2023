@@ -6,7 +6,7 @@ import '@/styles/components/Button.scss';
   - variant : solid, outline
 */}
 
-function Button({ className, children, link, variant }){
+function Button({ className = "", children, link, variant = "solid" }){
   return(
     <Link className={`button button--${variant} ${className}`} href={link}>
       <span className="button__text">{children}</span>
@@ -14,10 +14,5 @@ function Button({ className, children, link, variant }){
     </Link>
   )
 }
-
-Button.defaultProps = {
-  className: "",
-  variant: "solid"
-};
 
 export default Button;

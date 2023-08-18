@@ -1,7 +1,7 @@
 import Tag from '@/components/Tag';
 import '@/styles/components/TagList.scss';
 
-function TagList({ className, tags }){
+function TagList({ className = "", tags }){
   return (
     <div className={`tag-list ${className}`}>
       {tags.map((tag, index) => (
@@ -9,10 +9,6 @@ function TagList({ className, tags }){
       ))}
     </div>
   )
-}
-
-TagList.defaultProps = {
-  className: ""
 }
 
 export default TagList;

@@ -7,17 +7,12 @@ import '@/styles/components/Heading.scss';
   - color : dark, white
 */}
 
-function Heading({ className, children, as, size, color }){
+function Heading({ className = "", children, as, size, color = "dark" }){
   const HeadingTag = as;
 
   return(
     <HeadingTag className={`heading heading--${size} heading--${color} ${className}`}>{children}</HeadingTag>
   )
 }
-
-Heading.defaultProps = {
-  className: "",
-  color: "dark"
-};
 
 export default Heading;

@@ -7,7 +7,7 @@ import '@/styles/components/Icon.scss';
   - color : dark, white
 */}
 
-function Icon({ icon, width, color }){
+function Icon({ icon, width = "50px", color = "dark" }){
   switch(icon){
     case 'arrow-right':
       return (
@@ -47,11 +47,6 @@ function Icon({ icon, width, color }){
         </svg>
       )
   }
-}
-
-Icon.defaultProps = {
-  width: "50px",
-  color: "dark"
 }
 
 export default Icon;
