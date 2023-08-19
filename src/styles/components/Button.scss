@@ -1,13 +1,10 @@
 .button{
   display: inline-block;
   position: relative;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 160%;
-  padding: 20px;
-  border-radius: $border-radius;
   z-index: 1;
   transition: transform .2s;
+  display: inline-flex;
+  align-items: center;
 
   @media (min-width: $bp-md){
     font-size: 18px;
@@ -21,6 +18,12 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
+  }
+
+  &__icon{
+    position: relative;
+    z-index: 1;
+    margin-left: 8px;
   }
 
   &__bg{
@@ -43,12 +46,9 @@
   /* &:active .button__bg{
     transform: scale(1);
   } */
-
-  &--solid{
-    color: $white;
-  }
 }
 
+// Variants
 .button--solid{
   color: $white;
 
@@ -65,4 +65,23 @@
     background: transparent;
     border: 2px solid $dark;
   };
+}
+
+// Sizes
+.button--small{
+  padding: 12px 20px;
+  border-radius: 30px;
+
+  .button__bg{
+    border-radius: 30px;
+  }
+}
+
+.button--medium{
+  padding: 20px;
+  border-radius: $border-radius;
+
+  .button__bg{
+    border-radius: $border-radius;
+  }
 }

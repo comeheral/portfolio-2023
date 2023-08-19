@@ -33,7 +33,7 @@ function ProjectItem({ name, tags, text, link, image}){
         </div>
 
         <div className="project-item__details" ref={detailsElement} style={{ opacity: isHovered ? "1" : "0" }}>
-          {tags != undefined ? <TagList tags={tags} className="project-item__tags" /> : null}
+          {tags !== undefined ? <TagList tags={tags} className="project-item__tags" /> : null}
           <Text size="sm" color="white">{text}</Text>
         </div>
       </div>

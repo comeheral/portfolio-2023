@@ -21,6 +21,7 @@ export default function DesignSystem() {
 
       <Button link="/">Primary button</Button>
       <Button link="/" variant="outline">Secondary button</Button>
+      <Button link="/" size="small" icon="arrow-right">Small button</Button>
 
       <div className="icons-container">
         <Icon icon="design" width="80px" />
