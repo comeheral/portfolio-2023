@@ -8,7 +8,7 @@ function SectionHero({ title, text, buttons = [] }){
       <Heading as="h1" size="lg">{title}</Heading>
       <Text size="lg">{text}</Text>
       {
-        buttons.map((button) => <Button link={button.link}>{button.label}</Button>)
+        buttons.map((button, index) => <Button link={button.link} key={`button-${index}`}>{button.label}</Button>)
       }
     </section>
   )
