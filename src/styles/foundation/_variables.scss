@@ -1,0 +1,29 @@
+/* Colors */
+$dark: #11212C;
+$white: #FFFFFF;
+$cyan: #1FFFD4;
+$blue: #009DFF;
+$black: #212121;
+$pastel-blue: #E6EDF5;
+
+/* Fonts */
+$title-font: 'Clash Display', sans-serif;
+$text-font: 'Lexend', sans-serif;
+
+/* Layout */
+$page-padding: 32px;
+$page-width-d: calc(1128px + 2 * $page-padding);
+$page-width-m: 500px;
+$gap: 24px;
+$border-radius: 12px;
+
+/* Breakpoints */
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+$bp-sm-down: 575px;
+$bp-md-down: 767px;
+$bp-lg-down: 991px;
+$bp-xl-down: 1199px;

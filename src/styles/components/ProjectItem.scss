@@ -1,0 +1,81 @@
+$hover-anim-duration : .3s;
+
+.project-item{
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+
+  &__image{
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__content{
+    padding: 24px;
+    width: 100%;
+    position: relative;
+    transition: transform $hover-anim-duration;
+  }
+
+  &__overlay{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(transparent, rgba(black, 0.8));
+    transition: all $hover-anim-duration;
+  }
+
+  &__heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform $hover-anim-duration;
+  }
+
+  &__arrow{
+    background: $white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  &__details{
+    padding-top: 12px;
+    position: absolute;
+    width: calc(100% - 48px); // 48px refers to content padding
+    transition: opacity $hover-anim-duration;
+  }
+
+  &__tags{
+    margin-bottom: 16px;
+  }
+}
+
+/* $offset-test: 114px;
+
+.project-item:hover{
+  .project-item__content{
+    transform: translateY(-$offset-test);
+  }
+
+  .project-item__overlay{
+    transform: translateY($offset-test);
+    top: calc(-24px - $offset-test);
+  }
+
+  .project-item__details{
+    opacity: 1;
+  }
+
+} */
