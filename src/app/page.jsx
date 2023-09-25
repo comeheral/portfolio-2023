@@ -1,4 +1,8 @@
 /* import SectionHero from '@/components/SectionHero'; */
+import Image from 'next/image';
+import gradientLogo from '@/assets/big-gradient-logo.png';
+
+// Animation : animate-[spin_200s_linear_infinite]
 
 function HomePage(){
   /* const buttons = [
@@ -20,7 +24,8 @@ function HomePage(){
 
   return(
     <main className="flex justify-center items-center h-full">
-      <h1 className="text-3xl font-heading">Coming soon</h1>
+      <h1 className="text-4xl font-heading">Coming soon</h1>
+      <Image className="fixed -rotate-[30deg] scale-125 h-full w-auto max-w-none" src={gradientLogo} alt="Gradient logo"/>
     </main>
   )
 }
