@@ -1,5 +1,5 @@
 /* import { Inter } from 'next/font/google' */
-import '@/styles/main.scss';
+/* import '@/styles/main.scss'; */
 
 /* const inter = Inter({ subsets: ['latin'] }) */
 
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   )
 }

@@ -6,7 +6,24 @@ module.exports = {
       'heading': ['"Clash Display"', 'sans-serif'],
       'text': ['Lexend', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      colors: {
+        'dark': '#11212C',
+        'white': '#FFFFFF',
+        'pastelblue': '#E6EDF5'
+      },
+    },
+  },
+  safelist: [
+    'text-dark',
+    'text-white',
+    'bg-dark',
+    'bg-white',
+    'fill-dark',
+    'fill-white'
+  ],
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [],
 }

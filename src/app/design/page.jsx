@@ -4,6 +4,7 @@ import Button from '@/components/Button';
 import Icon from '@/components/Icon';
 import ProjectItem from '@/components/ProjectItem';
 
+import '@/styles/main.scss';
 import '@/styles/pages/design.scss';
 
 export default function DesignSystem() {
