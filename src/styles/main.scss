@@ -1,9 +1,9 @@
 // Foundation
-@import "foundation/reset";
+/* @import "foundation/reset"; */
 @import "foundation/fonts";
-@import "foundation/variables";
+/* @import "foundation/variables"; */
 
-body{
+/* body{
   font-family: $text-font;
   font-weight: 400;
   font-size: 16px;
@@ -36,7 +36,7 @@ body{
   @media (max-width: $bp-md-down){
     display: none;
   }
-}
+} */
 
 @tailwind base;
 @tailwind components;

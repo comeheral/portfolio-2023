@@ -8,8 +8,6 @@ import Icon from '@/components/Icon';
 import TagList from '@/components/TagList';
 import Text from '@/components/Text';
 
-import '@/styles/components/ProjectItem.scss';
-
 function ProjectItem({ name, tags, text, link, image}){
   const [isHovered, setIsHovered] = useState(false);
   const [detailsHeight, setDetailsHeight] = useState(null);
@@ -21,19 +19,19 @@ function ProjectItem({ name, tags, text, link, image}){
   }, [isHovered])
 
   return (
-    <a className="project-item" href={link} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <img className="project-item__image" src={image} alt="" />
-      <div className="project-item__content" style={{ transform: isHovered ? `translateY(-${detailsHeight}px)` : `translateY(0px)` }}>
-        <div className="project-item__overlay" style={{ transform: isHovered ? `translateY(${detailsHeight}px)` : `translateY(0px)`, top: isHovered ? `calc(-24px - ${detailsHeight}px)` : `-24px` }}></div>
-        <div className="project-item__heading-container">
-          <Heading className="project-item__heading" as="h3" size="sm" color="white">{name}</Heading>
-          <div className="project-item__arrow">
-            <Icon icon="arrow-right" width="16px"></Icon>
+    <a className="relative rounded-xl overflow-hidden aspect-square flex items-end cursor-pointer" href={link} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+      <img className="absolute inset-0 object-cover z-[-1]" src={image} alt="" />
+      <div className="p-6 w-full relative transition-transform duration-300" style={{ transform: isHovered ? `translateY(-${detailsHeight}px)` : `translateY(0px)` }}>
+        <div className="absolute inset-0 z-[-1] bg-gradient-to-t from-black opacity-80 transition-all duration-300" style={{ transform: isHovered ? `translateY(${detailsHeight}px)` : `translateY(0px)`, top: isHovered ? `calc(-24px - ${detailsHeight}px)` : `-24px` }}></div>
+        <div className="flex items-center justify-between transition-transform duration-300">
+          <Heading as="h3" size="sm" color="white">{name}</Heading>
+          <div className="bg-white h-12 w-12 rounded-full flex items-center justify-center shrink-0 ml-3">
+            <Icon icon="arrow-right" width="16px" />
           </div>
         </div>
 
-        <div className="project-item__details" ref={detailsElement} style={{ opacity: isHovered ? "1" : "0" }}>
-          {tags !== undefined ? <TagList tags={tags} className="project-item__tags" /> : null}
+        <div className="pt-3 absolute w-[calc(100%-48px)] transition-opacity durantion-300" ref={detailsElement} style={{ opacity: isHovered ? "1" : "0" }}>
+          {tags !== undefined ? <TagList tags={tags} className="mb-4" /> : null}
           <Text size="sm" color="white">{text}</Text>
         </div>
       </div>

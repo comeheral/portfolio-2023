@@ -1,9 +1,8 @@
 import Tag from '@/components/Tag';
-import '@/styles/components/TagList.scss';
 
 function TagList({ className = "", tags }){
   return (
-    <div className={`tag-list ${className}`}>
+    <div className={`flex flex-wrap gap-3 ${className}`}>
       {tags.map((tag, index) => (
         <Tag key={`tag-${index}`}>{tag}</Tag>
       ))}
