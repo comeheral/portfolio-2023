@@ -4,8 +4,6 @@ import Button from '@/components/Button';
 import Icon from '@/components/Icon';
 import ProjectItem from '@/components/ProjectItem';
 
-import '@/styles/main.scss';
-
 export default function DesignSystem() {
   const projectTags = ['e-commerce', 'shopify'];
 
