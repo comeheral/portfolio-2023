@@ -11,7 +11,7 @@ function HomePage(){
   const [sections, setSections] = useState([]);
 
   async function fetchSections(){
-    let response = await fetch('https://api.comeheral.fr/items/homepage?fields=sections.collection,sections.id,sections.item.*,sections.item.*.item.*', {
+    let response = await fetch('https://api.comeheral.fr/items/homepage?fields=sections.collection,sections.id,sections.item.*,sections.item.buttons.item.*,sections.item.image.*', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -35,10 +35,11 @@ function HomePage(){
   return (
     <main>
       {
-        sections.map((section, index) => {
+        sections.map((section) => {
           switch(section.collection){
             case 'section_hero' :
-              return <SectionHero key={section.id} title={section.item.heading} text={section.item.text} buttons={section.item.buttons} />
+              const imageUrl = 'https://api.comeheral.fr/' + 'assets/' + section.item.image.id;
+              return <SectionHero key={section.id} title={section.item.heading} text={section.item.text} buttons={section.item.buttons} image={{ url: imageUrl, height: section.item.image.height, width: section.item.image.width, alt: section.item.image.title }} />
             default :
               return null
           }

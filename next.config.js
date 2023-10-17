@@ -6,6 +6,16 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "@/styles/foundation/variables.scss";`
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.comeheral.fr',
+        port: '',
+        pathname: '/assets/**',
+      },
+    ],
+  },
   async redirects() {
     return [
       {
