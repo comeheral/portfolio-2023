@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import SectionHero from '@/components/SectionHero';
+import SectionFeatures from '@/components/SectionFeatures';
 
 // API URL : https://api.comeheral.fr
 // API token : ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP
@@ -39,17 +40,24 @@ function HomePage(){
           switch(section.collection){
             case 'section_hero' :
               const imageUrl = 'https://api.comeheral.fr/' + 'assets/' + section.item.image.id;
-              return <SectionHero key={section.id} title={section.item.heading} text={section.item.text} buttons={section.item.buttons} image={{ url: imageUrl, height: section.item.image.height, width: section.item.image.width, alt: section.item.image.title }} />
+              return <SectionHero 
+                        key={section.id} 
+                        title={section.item.heading} 
+                        text={section.item.text} 
+                        buttons={section.item.buttons} 
+                        image={{ url: imageUrl, height: section.item.image.height, width: section.item.image.width, alt: section.item.image.title }} 
+                      />
+              case 'section_features' :
+                return <SectionFeatures
+                          key={section.id} 
+                          bgColor={section.item.background_color} 
+                          features={section.item.features}
+                        />
             default :
               return null
           }
         })
       }
-      {/*<SectionHero 
-        title="Hello, I'm Côme !" 
-        text="E-commerce specialized front-end developer, I love to build awesome user experiences. Currently working at Lugus, I lead a developers’ team in order to build e-commerce stores on Shopify." 
-        buttons={buttons}
-    />*/}
     </main>
   )
 }
