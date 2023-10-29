@@ -41,3 +41,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Section features scrollbar pagination
+.section-features{
+  .swiper-scrollbar{
+    @apply static w-[120px] h-0.5 m-auto bg-pastelblue rounded-none #{!important};
+  }
+
+  .swiper-scrollbar-drag{
+    @apply bg-dark h-full mt-7 rounded-none #{!important};
+  }
+}

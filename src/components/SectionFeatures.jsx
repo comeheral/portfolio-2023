@@ -1,5 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Scrollbar } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/scrollbar';
+
 import { useMediaQuery } from 'react-responsive'
 
 import Container from '@/components/Container';
@@ -7,7 +10,6 @@ import Icon from '@/components/Icon';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 
-{/* TODO : Use Swiper with Vanilla JS to handle mobile initialization only */}
 
 function SectionFeatures({ features }){
   const isDesktop = useMediaQuery({
@@ -16,7 +18,7 @@ function SectionFeatures({ features }){
 
   if(isDesktop){
     return (
-      <section className="py-20 bg-pastelblue">
+      <section className="section-features py-20 bg-pastelblue">
         <Container>
             <div className="grid grid-cols-3 gap-6">
               {features.map((feature, index) => (
@@ -34,12 +36,14 @@ function SectionFeatures({ features }){
     )
   }else{
     return (
-      <section>
+      <section className="section-features">
         <Swiper 
+          modules={[Scrollbar]} 
           slidesPerView={'auto'} 
           spaceBetween={20} 
           centeredSlides={true} 
           centeredSlidesBounds={true} 
+          scrollbar={{ dragSize: 40 }}
         >
           {features.map((feature, index) => (
             <SwiperSlide className="!w-auto !h-auto self-stretch [&:first-child]:ml-[32px] [&:last-child]:mr-[32px]" key={`feature-${index}}`}>
