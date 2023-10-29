@@ -34,7 +34,7 @@ function HomePage(){
   }, [])
 
   return (
-    <main>
+    <main className="pb-20">
       {
         sections.map((section) => {
           switch(section.collection){
@@ -50,7 +50,6 @@ function HomePage(){
               case 'section_features' :
                 return <SectionFeatures
                           key={section.id} 
-                          bgColor={section.item.background_color} 
                           features={section.item.features}
                         />
             default :
