@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import SectionHero from '@/components/SectionHero';
 import SectionFeatures from '@/components/SectionFeatures';
 
+import fetchData from '@/utils/fetchData.js';
+
 // API URL : https://api.comeheral.fr
 // API token : ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP
 
@@ -12,20 +14,12 @@ function HomePage(){
   const [sections, setSections] = useState([]);
 
   async function fetchSections(){
-    let response = await fetch('https://api.comeheral.fr/items/homepage?fields=sections.collection,sections.id,sections.item.*,sections.item.buttons.item.*,sections.item.image.*', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP'
-      }
-    });
+    let response = await fetchData('/items/homepage?fields=sections.collection,sections.id,sections.item.*,sections.item.buttons.item.*,sections.item.image.*');
 
     if(response.ok){
       let json = await response.json();
       let data = json.data;
       setSections(data.sections);
-    }else{
-      console.error('An error occurred : ' + response.statusText);
     }
   }
 
