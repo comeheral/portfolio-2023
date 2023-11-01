@@ -1,12 +1,9 @@
-// API URL : https://api.comeheral.fr
-// API token : ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP
-
 export default async function fetchData(path){
-  let response = await fetch('https://api.comeheral.fr' + path, {
+  let response = await fetch(process.env.NEXT_PUBLIC_API_URL + path, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP'
+      'Authorization': `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`
     }
   });
 

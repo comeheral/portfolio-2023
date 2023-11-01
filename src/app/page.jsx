@@ -7,9 +7,6 @@ import SectionFeatures from '@/components/SectionFeatures';
 
 import fetchData from '@/utils/fetchData.js';
 
-// API URL : https://api.comeheral.fr
-// API token : ZXiSO4Tx1LEHwLHhEI6nTieuRtVurQVP
-
 function HomePage(){
   const [sections, setSections] = useState([]);
 
@@ -33,7 +30,7 @@ function HomePage(){
         sections.map((section) => {
           switch(section.collection){
             case 'section_hero' :
-              const imageUrl = 'https://api.comeheral.fr/' + 'assets/' + section.item.image.id;
+              const imageUrl = process.env.NEXT_PUBLIC_API_URL + '/assets/' + section.item.image.id;
               return <SectionHero 
                         key={section.id} 
                         title={section.item.heading} 
