@@ -7,7 +7,7 @@ import Image from 'next/image';
 function SectionHero({ title, text, buttons = [], image }){
   return (
     <section className="min-h-screen my-8 md:flex md:items-center md:my-0">
-      <Image className="w-[calc(100%-32px)] ml-auto pl-[calc(calc(100vw-500px-64px)/2)] md:absolute md:right-0 md:w-[45%] md:m-0 md:p-0" src={image.url} width={image.width} height={image.height} alt={image.alt} />
+      <Image className="w-full ml-auto pl-[32px] md:absolute md:right-0 md:w-[45%] md:m-0 md:p-0" src={image.url} width={image.width} height={image.height} alt={image.alt} />
       <Container>
         <div className="mt-14 md:w-1/2 md:mt-0">
           <Heading className="mb-4 md:mb-8" as="h1" size="lg">{title}</Heading>
