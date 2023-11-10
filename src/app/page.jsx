@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import SectionHero from '@/components/SectionHero';
 import SectionFeatures from '@/components/SectionFeatures';
 
-import fetchData from '@/utils/fetchData.js';
+import fetchData from '@/utils/fetchData';
 
 function HomePage(){
   const [sections, setSections] = useState([]);
