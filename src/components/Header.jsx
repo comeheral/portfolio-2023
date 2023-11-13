@@ -25,7 +25,7 @@ function Header(){
   const linkHoverStyles = "block relative before:absolute before:hidden before:-inset-x-3 before:-inset-y-2 before:bg-slate-100 before:z-[-1] before:rounded-lg hover:before:block"
 
   return items.length && (
-    <header className="bg-white flex items-center fixed top-6 left-1/2 translate-x-[-50%] py-4 px-5 rounded-2xl border border-slate-200 shadow-[0_4px_20px_rgba(78,115,210,0.1)] z-40">
+    <header className="bg-white hidden md:flex items-center fixed top-6 left-1/2 translate-x-[-50%] py-4 px-5 rounded-2xl border border-slate-200 shadow-[0_4px_20px_rgba(78,115,210,0.1)] z-40">
       <Link className={linkHoverStyles} href="/">
         <Logo width="68px" />
       </Link>
