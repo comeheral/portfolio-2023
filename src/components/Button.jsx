@@ -12,31 +12,24 @@ import Icon from '@/components/Icon';
 let btnVariants = {
   solid: {
     text: "text-white",
-    background: "bg-dark border-2 border-dark",
+    background: "bg-gradient-to-b from-[#18364A] to-dark hover:opacity-90 transition-opacity duration-300",
   },
   outline: {
     text: "text-dark",
-    background: "bg-transparent border-2 border-dark"
+    background: "bg-transparent border border-slate-300 hover:border-slate-400 transition-colors duration-300"
   }
 }
 
 let btnSizes = {
-  small: {
-    parent: "py-3 px-5 rounded-full",
-    background: "rounded-full"
-  },
-  medium: {
-    parent: "p-5 rounded-xl",
-    background: "rounded-xl"
-  }
+  small: "py-3 px-5 rounded-full",
+  medium: "p-5 rounded-xl"
 }
 
 function Button({ className = "", children, link, icon, variant = "solid", size = "medium" }){
   return(
-    <Link className={`group inline-flex relative z-[1] ${btnSizes[size].parent} ${className}`} href={link}>
+    <Link className={`inline-flex relative z-[1] ${btnSizes[size]} ${btnVariants[variant].background} ${className}`} href={link}>
       <span className={`block relative z-[1] font-text font-normal text-[18px] leading-none ${btnVariants[variant].text}`}>{children}</span>
       { icon !== undefined ? <Icon className="relative z-[1] ml-2" icon={icon} color="white" width="12px" /> : null }
-      <div className={`absolute inset-0 group-hover:scale-105 transition-transform duration-200 ${btnVariants[variant].background} ${btnSizes[size].background}`}></div>
     </Link>
   )
 }
