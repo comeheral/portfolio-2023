@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react';
 import SectionHero from '@/components/SectionHero';
 import SectionFeatures from '@/components/SectionFeatures';
+import SectionProjects from '@/components/SectionProjects';
 
 import fetchData from '@/utils/fetchData';
 
@@ -43,6 +44,8 @@ function HomePage(){
                           key={section.id} 
                           features={section.item.features}
                         />
+              case 'section_projects' :
+                return <SectionProjects />
             default :
               return null
           }

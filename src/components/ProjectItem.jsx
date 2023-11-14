@@ -7,6 +7,7 @@ import Heading from '@/components/Heading';
 import Icon from '@/components/Icon';
 import TagList from '@/components/TagList';
 import Text from '@/components/Text';
+import Image from 'next/image';
 
 function ProjectItem({ name, tags, text, link, image}){
   const [isHovered, setIsHovered] = useState(false);
@@ -20,7 +21,7 @@ function ProjectItem({ name, tags, text, link, image}){
 
   return (
     <a className="relative rounded-xl overflow-hidden aspect-square flex items-end cursor-pointer" href={link} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <img className="absolute inset-0 object-cover z-[-1]" src={image} alt="" />
+      <Image className="absolute inset-0 object-cover w-full z-[-1]" src={image.url} width={image.width} height={image.height} alt={image.alt} />
       <div className="p-6 w-full relative transition-transform duration-300" style={{ transform: isHovered ? `translateY(-${detailsHeight}px)` : `translateY(0px)` }}>
         <div className="absolute inset-0 z-[-1] bg-gradient-to-t from-black opacity-80 transition-all duration-300" style={{ transform: isHovered ? `translateY(${detailsHeight}px)` : `translateY(0px)`, top: isHovered ? `calc(-24px - ${detailsHeight}px)` : `-24px` }}></div>
         <div className="flex items-center justify-between transition-transform duration-300">
