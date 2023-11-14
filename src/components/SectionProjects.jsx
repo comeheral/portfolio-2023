@@ -28,14 +28,16 @@ function SectionProjects(){
   return (
     <section className="my-36">
       <Container>
-        <div className="flex justify-between">
-          <Heading as="h1" size="lg">Derniers projets</Heading>
+        <div className="md:flex md:justify-between mb-10">
+          <Heading className="text-center" as="h1" size="lg">Derniers projets</Heading>
           <Button className="hidden md:inline-flex" size="small" icon="arrow-right" link="/">Voir tous</Button>
         </div>
         
         <ProjectList projects={projects} />
 
-        <Button className="md:hidden" size="small" icon="arrow-right" link="/">Voir tous</Button>
+        <div className="text-center mt-8 md:hidden">
+          <Button size="small" icon="arrow-right" link="/">Voir tous</Button>
+        </div>
       </Container>
     </section>
   )
